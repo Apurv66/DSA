@@ -118,13 +118,10 @@ struct node *delete_beginning(struct node *head)
         printf("List is already empty..!!\n");
         return NULL;
     }
-    else
-    {
-        struct node *temp = head;
-        head = head->next;
-        free(temp);
-        return head;
-    }
+    struct node *temp = head;
+    head = head->next;
+    free(temp);
+    return head;
 }
 
 struct node *delete_end(struct node *head)
